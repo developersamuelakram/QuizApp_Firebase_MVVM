@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:id="@+id/detailimage"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/placeholder_image"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/detailimage"
+        app:cardBackgroundColor="#F48FB1"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz Title"
+                android:id="@+id/detailquiztitle"
+                android:fontFamily="@font/crimson_text"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="25sp"
+                android:textColor="@color/white"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@id/detailquiztitle"
+                android:id="@+id/detailquizdesc"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too a galley of type and scrambled it to make a type specimen book. "
+                android:fontFamily="@font/work_sans"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="100dp"
+                android:text="Beginner"
+                android:layout_alignParentRight="true"
+                android:id="@+id/detailleveltext"
+                android:textSize="15sp"
+                android:layout_below="@id/detailquizdesc"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="100dp"
+                android:layout_alignParentRight="true"
+                android:text="10"
+                android:id="@+id/detailquestionstext"
+                android:textSize="15sp"
+                android:layout_below="@id/detailleveltext"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="100dp"
+                android:layout_alignParentRight="true"
+                android:text="N/A"
+                android:id="@+id/detaillastscoretext"
+                android:textSize="15sp"
+                android:layout_below="@id/detailquestions"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:text="Level"
+                android:id="@+id/detaillevel"
+                android:textSize="15sp"
+                android:layout_below="@id/detailquizdesc"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="100dp"
+                android:text="Questions"
+                android:id="@+id/detailquestions"
+                android:textSize="15sp"
+                android:layout_below="@id/detaillevel"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="100dp"
+                android:text="Last Score"
+                android:id="@+id/detaillastscore"
+                android:textSize="15sp"
+                android:layout_below="@id/detailquestions"/>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_below="@id/detaillastscore"
+                android:text="Take Quiz"
+                android:id="@+id/detailtakequizbutton"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white" />
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

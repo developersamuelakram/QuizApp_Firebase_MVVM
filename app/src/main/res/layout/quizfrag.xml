@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    android:layout_height="match_parent">
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/backbutton"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="45dp"
+        android:id="@+id/cancelbutton"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cancelbutton"
+        android:text="Loading Quiz"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:fontFamily="@font/crimson_text"
+        android:textSize="38sp"
+        android:gravity="center_horizontal"
+        android:id="@+id/quiztitlequiz"/>
+
+
+
+
+    <ProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/quizProgressBar"
+        android:visibility="invisible"
+        android:progress="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progressDrawable="@drawable/circular_progress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="150dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:gravity="center_horizontal"
+        android:textSize="70sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/timertext"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="@id/quizProgressBar"
+        app:layout_constraintStart_toStartOf="@id/quizProgressBar"
+        app:layout_constraintEnd_toEndOf="@id/quizProgressBar"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/timertext"
+        android:text="Who is Elon Musk?"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/quizquestion"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/work_sans"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/optiona"
+        android:text="Option A"
+        android:visibility="invisible"
+        android:background="@drawable/outline_light_btn_bg"
+        android:fontFamily="@font/work_sans"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/quizquestion"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/optionb"
+        android:text="Option B"
+        android:visibility="invisible"
+        android:fontFamily="@font/work_sans"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:background="@drawable/outline_light_btn_bg"
+        app:layout_constraintTop_toBottomOf="@id/optiona"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/optionc"
+        android:text="Option C"
+        android:visibility="invisible"
+        android:background="@drawable/outline_light_btn_bg"
+        android:fontFamily="@font/work_sans"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/optionb"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/optionc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Answer Feedback"
+        android:visibility="invisible"
+        android:textSize="15sp"
+        android:fontFamily="@font/work_sans"
+        android:id="@+id/quizanswerfeedback"
+        android:layout_marginTop="20dp"/>
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/quiznext"
+        android:text="Next"
+        android:visibility="invisible"
+        android:background="@drawable/primary_btn_bg"
+        android:fontFamily="@font/work_sans"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/quizanswerfeedback"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

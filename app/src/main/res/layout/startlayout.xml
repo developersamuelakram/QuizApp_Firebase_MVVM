@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#F48FB1"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/placeholder_image"
+            android:id="@+id/listimage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listimage"
+            android:text="Quiz Title"
+            android:id="@+id/layoutquiztitle"
+            android:fontFamily="@font/crimson_text"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="25sp"
+            android:textColor="@color/white"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/layoutquiztitle"
+            android:id="@+id/listquizdesc"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum is simply dummy text of the printing
+         and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer too a galley of type and scrambled it to make a type specimen book. "
+            android:fontFamily="@font/work_sans"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Level"
+            android:fontFamily="@font/crimson_text"
+            android:textSize="20sp"
+            android:id="@+id/listlevel"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:layout_below="@id/listquizdesc"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listquizdesc"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="Take Quiz"
+            android:id="@+id/takequizBtn"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
+
+
+
+

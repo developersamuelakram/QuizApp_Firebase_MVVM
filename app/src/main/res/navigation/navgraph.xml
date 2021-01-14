@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.myquizapp.Fragment.StartFragment"
+        tools:layout="@layout/startfragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_listFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popUpTo="@id/startFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.myquizapp.Fragment.ListFragment"
+        tools:layout="@layout/listfragment"
+
+        android:label="ListFragment" >
+        <action
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            android:id="@+id/action_listFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.myquizapp.Fragment.DetailFragment"
+        tools:layout="@layout/detailfrag"
+
+        android:label="DetailFragment" >
+        <action
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_down"
+            android:id="@+id/action_detailFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="Position"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.example.myquizapp.Fragment.QuizFragment"
+        tools:layout="@layout/quizfrag"
+
+        android:label="QuizFragment" >
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/quizFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/resultFragment" />
+        <argument
+            android:name="quizname"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="quizid"
+            android:defaultValue="null" />
+        <argument
+            android:name="totalNumberOfQuestion"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        tools:layout="@layout/resultfrag"
+
+        android:name="com.example.myquizapp.Fragment.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_listFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@id/resultFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="UserId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="Quizid"
+            app:argType="string"
+            android:defaultValue="null" />
+    </fragment>
+</navigation>
