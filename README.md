@@ -4,17 +4,17 @@ Quiz App built  with Android Jetpack Components (Navigation - MVVM) and Firebase
 Youtube tutorial: https://www.youtube.com/playlist?list=PLKETiCsEsH0rU9mP3oXmfq5u9_wTpjMLH
 
 # Homepage, with progressbar
-![](image/one.png)
+![](images/one.jpg)
 
 # RecyclerView, Displaying List of Quizes
-![](image/two.png)
+![](images/two.jpg)
 
 # Detail of quiz. 
-![](image/three.png)
+![](images/three.jpg)
 
 # Quiz Fragment. 
-![](image/four.png)
+![](images/four.jpg)
 
 
 # Result Fragment. 
-![](image/five.png)
+![](images/five.jpg)
